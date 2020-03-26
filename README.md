@@ -1,14 +1,23 @@
-BARTOSZ OLSZEWSKI - portfolio project
+# BARTOSZ OLSZEWSKI - portfolio project
 
-Technologies in use:
+## Technologies in use:
 - HTML
 - CSS, SASS / scss, 7 - 1 pattern, BEM
 - JS,
 - NPM,
 - GIT,
 
-Build Setup:
+# Build Setup:
 
-# install dependecies
+## install dependecies:
 npm install
 
+npm install live-server
+
+npm install node-sass --save-dev
+
+npm install npm-run-all --save-dev
+
+## run dev server:
+
+npm run start
