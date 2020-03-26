@@ -1,0 +1,106 @@
+.card {
+
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+    position: relative;
+    height: 24rem;
+
+    &__side {
+        height: 24rem;
+        transition: all .8s ease;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        border-radius: 10px;
+        overflow: hidden;
+        // box-shadow: $box-shadow-primary;
+
+        &--front {
+            background-color: white;
+        }
+
+        &--back {
+            background-color: green;
+            transform: rotateY(180deg);
+
+
+        }
+
+    }
+
+    &:hover &__side--front {
+        transform: rotateY(-180deg);
+    }
+
+    &:hover &__side--back {
+        transform: rotateY(0);
+    }
+
+    &__icon {
+        display: block;
+        width: 18rem;
+        height: 18rem;
+        @include ctr;
+
+        &--atom {
+            transform: scale(2) translate(-22%, -35%);
+        }
+
+        &--js {
+            transform: scale(.7) translate(-70%, -70%);
+        }
+
+        &--react {
+            transform: scale(1.5) translate(-33%, -35%);
+        }
+
+        &--vue {
+            transform: scale(.9) translate(-55%, -60%);
+        }
+
+        &--npm {
+            transform: translate(-48%, -20%);
+        }
+
+        &--gulp {
+            transform: translate(-17%, -40%);
+        }
+
+        &--webpack {
+            transform: scale(1.5) translate(-33%, -34%);
+        }
+
+        &--wordpress {
+            transform: scale(1) translate(-47%, -15%);
+        }
+
+        &--node {
+            transform: scale(.8) translate(-60%, -50%);
+        }
+
+        &--typescript {
+            transform: scale(6) translate(35.5%, 35%);
+        }
+    }
+
+    &__heading {
+        @include ctr;
+
+        &--bem {
+            font-size: 5rem;
+            font-family: 'roboto', sans-serif;
+            font-weight: 200;
+        }
+
+        &--rest {
+            width: 100%;
+            top: 88%;
+            font-size: 2.5rem;
+            text-align: center;
+
+        }
+    }
+}
